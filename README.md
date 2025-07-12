@@ -33,9 +33,9 @@ A new Flutter project.
    - Price calculation based on quantity and tax  
 
 5. **Cart Screen** (button is on the top right)
-   - Checkout implementation  
    - Shows the added products in the cart (if any)  
-   - Shows the total price with ability to increment/decrement quantity  
+   - Shows the total price with ability to increment/decrement quantity
+   - Ability to remove a selected product/s from the cart
 
 ### Technical Implementation
 
@@ -89,3 +89,6 @@ lib/
 ```
 
 The app uses mock API dynamic data.
+
+### Future Work
+Checkout functionality
