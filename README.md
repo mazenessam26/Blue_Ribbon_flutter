@@ -4,69 +4,71 @@ A new Flutter project.
 
 ## Getting Started
 
-Features Implemented:
-1. Login Screen
+### Features Implemented
 
-Email and password input fields
-Form validation for required fields and email format
-Demo credentials: user@example.com / password123
-Error handling for incorrect or missing credentials
+1. **Login Screen**
+   - Email and password input fields  
+   - Form validation for required fields and email format  
+   - Demo credentials: `user@example.com / password123`  
+   - Error handling for incorrect or missing credentials  
 
-2. Restaurants List Screen
+2. **Restaurants List Screen**
+   - Displays restaurant cards with name, description, image, and rating  
+   - Default image for uninserted images by the restaurant  
+   - Search functionality to filter restaurants  
+   - Tap to navigate to restaurant products  
+   - Logout functionality (top right of the screen)  
 
-Displays restaurant cards with name, description, image, and rating (also default image for uninserted images by the restaurant)
-Search functionality to filter restaurants
-Tap to navigate to restaurant products
-Logout functionality(top right of the screen)
+3. **Restaurant Products Screen**
+   - Shows restaurant header with details  
+   - Lists all products for the selected restaurant  
+   - Search functionality for products  
+   - Shopping cart icon with item count badge  
+   - Tap products to view details  
 
-3. Restaurant Products Screen
+4. **Product Details Screen**
+   - Full product information display  
+   - Quantity selector (increment/decrement)  
+   - Add to cart functionality with confirmation  
+   - Price calculation based on quantity and tax  
 
-Shows restaurant header with details
-Lists all products for the selected restaurant
-Search functionality for products
-Shopping cart icon with item count badge
-Tap products to view details
+5. **Cart Screen** (button is on the top right)
+   - Checkout implementation  
+   - Shows the added products in the cart (if any)  
+   - Shows the total price with ability to increment/decrement quantity  
 
-4. Product Details Screen
+### Technical Implementation
 
-Full product information display
-Quantity selector (increment/decrement)
-Add to cart functionality with confirmation
-Price calculation based on quantity and tax
+**State Management - Riverpod**
 
-5-cart screen(the botton is on the top right)
-checkout implementation
-showing the added products in the cart(if any)
-also showing the total price with ability to increment/decrement the order quantaty if needed
+- `AuthProvider` - Manages authentication state  
+- `RestaurantsProvider` - Provides restaurant data  
+- `ProductsProvider` - Provides product data with family provider for restaurant filtering  
+- `CartProvider` - Manages shopping cart state  
 
-Technical Implementation:
-State Management - Riverpod
+### Data Models
 
-AuthProvider - Manages authentication state
-RestaurantsProvider - Provides restaurant data
-ProductsProvider - Provides product data with family provider for restaurant filtering
-CartProvider - Manages shopping cart state
+- **Restaurant** - Restaurant entity with all required fields  
+- **Product** - Product entity with restaurant association  
+- **CartItem** - Cart item with product and quantity  
 
-Data Models
+### Additional Features
 
-Restaurant - Restaurant entity with all required fields
-Product - Product entity with restaurant association
-CartItem - Cart item with product and quantity
+- Search functionality for both restaurants and products  
+- Shopping cart with quantity management  
+- Image error handling with fallback icons  
+- Responsive design with proper spacing and styling  
+- Navigation flow between all screens  
 
-Additional Features
+### How to Run It
 
-Search functionality for both restaurants and products
-Shopping cart with quantity management
-Image error handling with fallback icons
-Responsive design with proper spacing and styling
-Navigation flow between all screens
+```bash
+flutter run
+```
 
-How to run it:
-type in the terminal: flutter run
+### File Structure
 
-
-File Structure:
-
+```
 lib/
 ├── main.dart
 ├── models/
@@ -83,7 +85,7 @@ lib/
     ├── restaurants_screen.dart
     ├── restaurant_products_screen.dart
     ├── product_details_screen.dart
-    └──cart_screen.dart
+    └── cart_screen.dart
+```
 
-    
-The app uses mock api dynamic data
+The app uses mock API dynamic data.
