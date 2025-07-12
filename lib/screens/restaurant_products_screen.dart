@@ -4,6 +4,7 @@ import 'product_details_screen.dart';
 import '../models/restaurant.dart';
 import '../providers/cart_provider.dart';
 import '../providers/products_provider.dart';
+import './cart_screen.dart';
 class RestaurantProductsScreen extends ConsumerStatefulWidget {
   final Restaurant restaurant;
 
@@ -37,6 +38,12 @@ class _RestaurantProductsScreenState extends ConsumerState<RestaurantProductsScr
                     icon: const Icon(Icons.shopping_cart),
                     onPressed: () {
                       // TODO: Navigate to cart screen
+                      Navigator.push(
+                       context,
+                       MaterialPageRoute(
+                        builder: (context) => const CartScreen(),
+                      ),
+                    );
                     },
                   ),
                   if (cart.isNotEmpty)
